@@ -1,0 +1,12 @@
+C:\Users\Admin\Desktop\Project\C#\Pracitces\Diary\Diary\bin\Debug\Diary.exe.config
+C:\Users\Admin\Desktop\Project\C#\Pracitces\Diary\Diary\bin\Debug\Diary.exe
+C:\Users\Admin\Desktop\Project\C#\Pracitces\Diary\Diary\bin\Debug\Diary.pdb
+C:\Users\Admin\Desktop\Project\C#\Pracitces\Diary\Diary\obj\Debug\Diary.Add.resources
+C:\Users\Admin\Desktop\Project\C#\Pracitces\Diary\Diary\obj\Debug\Diary.Form1.resources
+C:\Users\Admin\Desktop\Project\C#\Pracitces\Diary\Diary\obj\Debug\Diary.ListItem.resources
+C:\Users\Admin\Desktop\Project\C#\Pracitces\Diary\Diary\obj\Debug\Diary.Properties.Resources.resources
+C:\Users\Admin\Desktop\Project\C#\Pracitces\Diary\Diary\obj\Debug\Diary.csproj.GenerateResource.Cache
+C:\Users\Admin\Desktop\Project\C#\Pracitces\Diary\Diary\obj\Debug\Diary.exe
+C:\Users\Admin\Desktop\Project\C#\Pracitces\Diary\Diary\obj\Debug\Diary.pdb
+C:\Users\Admin\Desktop\Project\C#\Pracitces\Diary\Diary\obj\Debug\Diary.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Desktop\Project\C#\Pracitces\Diary\Diary\obj\Debug\Diary.Info.resources
