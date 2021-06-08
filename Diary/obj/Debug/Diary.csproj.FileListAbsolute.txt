@@ -10,3 +10,9 @@ C:\Users\Admin\Desktop\Project\C#\Pracitces\Diary\Diary\obj\Debug\Diary.exe
 C:\Users\Admin\Desktop\Project\C#\Pracitces\Diary\Diary\obj\Debug\Diary.pdb
 C:\Users\Admin\Desktop\Project\C#\Pracitces\Diary\Diary\obj\Debug\Diary.csprojResolveAssemblyReference.cache
 C:\Users\Admin\Desktop\Project\C#\Pracitces\Diary\Diary\obj\Debug\Diary.Info.resources
+C:\Users\Admin\Desktop\Project\C#\Pracitces\Diary\Diary\bin\Debug\PersianDateTime.dll
+C:\Users\Admin\Desktop\Project\C#\Pracitces\Diary\Diary\bin\Debug\PersianDateTime.xml
+C:\Users\Admin\Desktop\Project\C#\Pracitces\Diary\Diary\bin\Debug\Diary.exe.manifest
+C:\Users\Admin\Desktop\Project\C#\Pracitces\Diary\Diary\bin\Debug\Diary.application
+C:\Users\Admin\Desktop\Project\C#\Pracitces\Diary\Diary\obj\Debug\Diary.exe.manifest
+C:\Users\Admin\Desktop\Project\C#\Pracitces\Diary\Diary\obj\Debug\Diary.application

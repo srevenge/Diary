@@ -21,6 +21,7 @@ namespace Diary
         private void Add_FormClosing(object sender, FormClosingEventArgs e)
         {
             this.main.Enabled = true;
+            this.main.startTimer();
             this.main.memory = null;
         }
 
@@ -138,7 +139,7 @@ namespace Diary
             ListItem l = new ListItem();
             l.title = this.memory.title;
             l.content = this.memory.content;
-            l.time = this.memory.creationDate.ToLocalTime().ToLongTimeString();
+            l.time = DateConverter.Convert(new PersianDateTime(this.memory.creationDate));
             l.category = this.memory.category;
             l.Click += this.main.handleListItemClick;
             l._pictureBox1.Click += this.main.handleBtnDetail;

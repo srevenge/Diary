@@ -39,6 +39,7 @@
             this.ذخیرهToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.جدیدToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.placeHolderTextBox1 = new Diary.PlaceHolderTextBox();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
@@ -46,7 +47,6 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.placeHolderTextBox1 = new Diary.PlaceHolderTextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.menuStrip1.SuspendLayout();
@@ -173,6 +173,18 @@
             this.panel2.Size = new System.Drawing.Size(652, 554);
             this.panel2.TabIndex = 0;
             // 
+            // placeHolderTextBox1
+            // 
+            this.placeHolderTextBox1.Font = new System.Drawing.Font("Tanha", 12F, System.Drawing.FontStyle.Italic);
+            this.placeHolderTextBox1.ForeColor = System.Drawing.Color.Gray;
+            this.placeHolderTextBox1.Location = new System.Drawing.Point(0, 9);
+            this.placeHolderTextBox1.Name = "placeHolderTextBox1";
+            this.placeHolderTextBox1.PlaceHolderText = "                           عنوان خاطره";
+            this.placeHolderTextBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.placeHolderTextBox1.Size = new System.Drawing.Size(648, 32);
+            this.placeHolderTextBox1.TabIndex = 2;
+            this.placeHolderTextBox1.Text = "عنوان خاطره";
+            // 
             // richTextBox1
             // 
             this.richTextBox1.Location = new System.Drawing.Point(4, 56);
@@ -258,18 +270,6 @@
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.handleCategoriesClick);
             // 
-            // placeHolderTextBox1
-            // 
-            this.placeHolderTextBox1.Font = new System.Drawing.Font("Tanha", 12F, System.Drawing.FontStyle.Italic);
-            this.placeHolderTextBox1.ForeColor = System.Drawing.Color.Gray;
-            this.placeHolderTextBox1.Location = new System.Drawing.Point(0, 9);
-            this.placeHolderTextBox1.Name = "placeHolderTextBox1";
-            this.placeHolderTextBox1.PlaceHolderText = "                           عنوان خاطره";
-            this.placeHolderTextBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.placeHolderTextBox1.Size = new System.Drawing.Size(648, 32);
-            this.placeHolderTextBox1.TabIndex = 2;
-            this.placeHolderTextBox1.Text = "عنوان خاطره";
-            // 
             // Add
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 25F);
@@ -280,9 +280,11 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Tanha", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(4, 6, 4, 6);
+            this.MaximizeBox = false;
             this.Name = "Add";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "افزودن خاطره";

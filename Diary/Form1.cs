@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Windows.Forms;
 using System.IO;
+
 using Model;
 
 namespace Diary
@@ -12,6 +13,7 @@ namespace Diary
         private Memory _memory;
         private string[] categories = { "شخصی", "خانوادگی", "مطالعه", "کاری", "تعیین نشده" };
         private bool flag;
+        private Timer timer = new Timer();
         public Memory memory
         {
             get
@@ -44,7 +46,7 @@ namespace Diary
 
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
-            
+
         }
 
         private void showAddMemoryPage()
@@ -52,6 +54,7 @@ namespace Diary
 
             new Add(this).Show();
             this.Enabled = false;
+            this.timer.Stop();
         }
 
         public void handleListItemClick(object sender, EventArgs e)
@@ -61,10 +64,11 @@ namespace Diary
             {
                 new Add(this).Show();
                 this.Enabled = false;
+                this.timer.Stop();
             }
             else
                 MessageBox.Show("نمی‌تونه باز بشه");
-            
+
         }
 
         public void handleBtnDetail(object sender, EventArgs e)
@@ -74,6 +78,7 @@ namespace Diary
             if (this.memory != null)
             {
                 this.Enabled = false;
+                this.timer.Stop();
                 new Info(this).Show();
             }
             else
@@ -83,8 +88,8 @@ namespace Diary
         {
             PictureBox p = sender as PictureBox;
             Memory m = this.findMemory(p.Parent as ListItem);
-            
-            if(this.memories.Count == 1)
+
+            if (this.memories.Count == 1)
             {
                 File.Delete("dData\\dm.bin");
                 this.memories.Remove(m);
@@ -109,7 +114,28 @@ namespace Diary
             this.showAddMemoryPage();
         }
 
+        private void refreshPage(object sender, EventArgs e)
+        {
+            this.flowLayoutPanel1.Controls.Clear();
+            this.memories.Reverse();
+            foreach (Memory m in this.memories)
+            {
+                ListItem l = new ListItem();
+                l.title = m.title;
+                l.content = m.content;
 
+
+                l.time = DateConverter.Convert(new PersianDateTime(m.creationDate));
+                l.category = m.category;
+                l.Click += handleListItemClick;
+                l._pictureBox1.Click += handleBtnDetail;
+                l._pictureBox2.Click += handleBtnDel;
+
+                this.flowLayoutPanel1.Controls.Add(l);
+            }
+            this.memories.Reverse();
+            this.textBox1.ReadOnly = false;
+        }
         public void setMemories()
         {
             this.MainFlow.Controls.Clear();
@@ -123,7 +149,9 @@ namespace Diary
                     ListItem l = new ListItem();
                     l.title = m.title;
                     l.content = m.content;
-                    l.time = m.creationDate.ToLocalTime().ToLongTimeString();
+                    
+
+                    l.time = DateConverter.Convert(new PersianDateTime(m.creationDate));
                     l.category = m.category;
                     l.Click += handleListItemClick;
                     l._pictureBox1.Click += handleBtnDetail;
@@ -141,13 +169,14 @@ namespace Diary
         private void Form1_Load(object sender, EventArgs e)
         {
             this.setMemories();
+            this.setTimer();
+            this.startTimer();
             this.setAutoCompleteSearchBar();
         }
-
         private Memory findMemory(ListItem l)
         {
             foreach (Memory m in this.memories)
-                if (m.title == l.title && m.content == l.content && m.creationDate.ToLocalTime().ToLongTimeString() == l.time && m.category == l.category)
+                if (m.title == l.title && m.content == l.content && DateConverter.Convert(new PersianDateTime(m.creationDate)) == l.time && m.category == l.category)
                     return m;
             return null;
         }
@@ -181,6 +210,16 @@ namespace Diary
 
 
             textBox1.AutoCompleteCustomSource = acl;
+        }
+
+        private void setTimer()
+        {
+            timer.Tick += new EventHandler(refreshPage);
+            timer.Interval = 30000;
+        }
+        public void startTimer()
+        {
+            timer.Start();
         }
     }
 }

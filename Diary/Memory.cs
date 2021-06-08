@@ -6,7 +6,9 @@ namespace Model
     public class Memory
     {
         private string _title, _content, _category;
-        private DateTime _creationDate, _updateDate;
+
+        private DateTime _creationDate;
+        private DateTime _updateDate;
 
         public Memory()
         {

@@ -1,12 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Globalization;
 
 namespace Diary
 {
@@ -26,8 +21,9 @@ namespace Diary
 
         private void Info_FormClosing(object sender, FormClosingEventArgs e)
         {
-            this.main.memory = null;
             this.main.Enabled = true;
+            this.main.startTimer();
+            this.main.memory = null;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -40,8 +36,8 @@ namespace Diary
             this.Text = this.main.memory.title;
             this.label3.Text = this.main.memory.title;
             this.label5.Text = this.main.memory.category;
-            this.label7.Text = this.main.memory.creationDate.ToLocalTime().ToLongTimeString();
-            this.label9.Text = this.main.memory.updateDate.ToLocalTime().ToLongTimeString();
+            this.label7.Text = new PersianDateTime(this.main.memory.creationDate).ToString("dddd d MMMM yyyy ساعت hh:mm:ss tt");
+            this.label9.Text = new PersianDateTime(this.main.memory.updateDate).ToString("dddd d MMMM yyyy ساعت hh:mm:ss tt");
 
             switch (this.label5.Text)
             {

@@ -1,12 +1,11 @@
-﻿using System;
-using System.Threading.Tasks;
-using System.IO;
+﻿using System.IO;
 using System.Collections.Generic;
 
 namespace Model
 {
-    public static class FileStreams
+    class FileStreams
     {
+        private FileStreams() { }
         public static List<Memory> deSerialize(string path)
         {
             if (File.Exists(path))

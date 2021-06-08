@@ -1,0 +1,17 @@
+C:\Users\Admin\Desktop\Project\C#\Pracitces\Diary\Diary\bin\Release\Diary.exe.config
+C:\Users\Admin\Desktop\Project\C#\Pracitces\Diary\Diary\bin\Release\Diary.exe
+C:\Users\Admin\Desktop\Project\C#\Pracitces\Diary\Diary\bin\Release\Diary.pdb
+C:\Users\Admin\Desktop\Project\C#\Pracitces\Diary\Diary\bin\Release\PersianDateTime.dll
+C:\Users\Admin\Desktop\Project\C#\Pracitces\Diary\Diary\bin\Release\PersianDateTime.xml
+C:\Users\Admin\Desktop\Project\C#\Pracitces\Diary\Diary\obj\Release\Diary.Add.resources
+C:\Users\Admin\Desktop\Project\C#\Pracitces\Diary\Diary\obj\Release\Diary.Form1.resources
+C:\Users\Admin\Desktop\Project\C#\Pracitces\Diary\Diary\obj\Release\Diary.Info.resources
+C:\Users\Admin\Desktop\Project\C#\Pracitces\Diary\Diary\obj\Release\Diary.ListItem.resources
+C:\Users\Admin\Desktop\Project\C#\Pracitces\Diary\Diary\obj\Release\Diary.Properties.Resources.resources
+C:\Users\Admin\Desktop\Project\C#\Pracitces\Diary\Diary\obj\Release\Diary.csproj.GenerateResource.Cache
+C:\Users\Admin\Desktop\Project\C#\Pracitces\Diary\Diary\obj\Release\Diary.exe
+C:\Users\Admin\Desktop\Project\C#\Pracitces\Diary\Diary\obj\Release\Diary.pdb
+C:\Users\Admin\Desktop\Project\C#\Pracitces\Diary\Diary\bin\Release\Diary.exe.manifest
+C:\Users\Admin\Desktop\Project\C#\Pracitces\Diary\Diary\bin\Release\Diary.application
+C:\Users\Admin\Desktop\Project\C#\Pracitces\Diary\Diary\obj\Release\Diary.exe.manifest
+C:\Users\Admin\Desktop\Project\C#\Pracitces\Diary\Diary\obj\Release\Diary.application
