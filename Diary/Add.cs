@@ -91,7 +91,7 @@ namespace Diary
                         File.Delete("dData\\dm.bin");
                         this.main.MainFlow.Controls.Clear();
                         this.main.txtSearch.ReadOnly = true;
-                        this.main.memories.Remove(this.main.memory);
+                        this.main.memories = null;
                     }
                         
                     else
@@ -186,12 +186,17 @@ namespace Diary
                     this.بازکردنToolStripMenuItem.DropDownItems.Add(mI);
                 }
                 this.main.memories.Reverse();
+            }else
+            {
+                this.بازکردنToolStripMenuItem.Enabled = false;
             }
             
         }
 
         private void initAdd()
         {
+            if (this.main.memories == null)
+                this.بازکردنToolStripMenuItem.Enabled = false;
             cat = "";
             pictureBox6.BackColor = Color.Aqua;
         }

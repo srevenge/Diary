@@ -15,7 +15,7 @@ namespace Model
                 int diffMonth = PersianDateTime.Now.Month - pc.Month;
                 if (diffMonth == 0)
                 {
-                    int diffDay = PersianDateTime.Now.Year - pc.Year;
+                    int diffDay = PersianDateTime.Now.Day - pc.Day;
                     if (diffDay == 0)
                     {
                         int diffHour = PersianDateTime.Now.Hour - pc.Hour;

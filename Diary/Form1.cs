@@ -92,7 +92,7 @@ namespace Diary
             if (this.memories.Count == 1)
             {
                 File.Delete("dData\\dm.bin");
-                this.memories.Remove(m);
+                this.memories = null;
             }
             else
             {
@@ -116,25 +116,17 @@ namespace Diary
 
         private void refreshPage(object sender, EventArgs e)
         {
-            this.flowLayoutPanel1.Controls.Clear();
-            this.memories.Reverse();
-            foreach (Memory m in this.memories)
+            if(this.memories != null)
             {
-                ListItem l = new ListItem();
-                l.title = m.title;
-                l.content = m.content;
-
-
-                l.time = DateConverter.Convert(new PersianDateTime(m.creationDate));
-                l.category = m.category;
-                l.Click += handleListItemClick;
-                l._pictureBox1.Click += handleBtnDetail;
-                l._pictureBox2.Click += handleBtnDel;
-
-                this.flowLayoutPanel1.Controls.Add(l);
+                int i = 0;
+                this.memories.Reverse();
+                foreach (ListItem l in flowLayoutPanel1.Controls)
+                {
+                    l.time = DateConverter.Convert(new PersianDateTime(this.memories[i++].creationDate));
+                }
+                this.memories.Reverse();
             }
-            this.memories.Reverse();
-            this.textBox1.ReadOnly = false;
+            
         }
         public void setMemories()
         {
@@ -210,12 +202,13 @@ namespace Diary
 
 
             textBox1.AutoCompleteCustomSource = acl;
+            textBox1.AutoCompleteMode = AutoCompleteMode.Suggest;
         }
 
         private void setTimer()
         {
             timer.Tick += new EventHandler(refreshPage);
-            timer.Interval = 30000;
+            timer.Interval = 5000;
         }
         public void startTimer()
         {

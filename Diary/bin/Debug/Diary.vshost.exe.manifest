@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Diary.exe" size="233952">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Diary.exe" size="233440">
       <assemblyIdentity name="Diary" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>l4MU32oxWliOkD/p9WNWhzX9S9rvVstuFiTUbfcJnMc=</dsig:DigestValue>
+        <dsig:DigestValue>bdmiPhAFb0AB2xobpMhAERngq0sIQ5qqAiqcrELLKzc=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
